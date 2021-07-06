@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="Author" content="阿飞飞">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <style>
+        *{margin:0;padding:0;}
+        
+    </style>
+    <script src="/dist/bundle.js"></script>
+</head>
+<body>
+    <div id="app">
+        你好！{{a}}
+        <div class="test">
+            <h3>哈哈哈</h3>
+        </div>
+        <input type="text" v-model="a" />
+    </div>
+    <script>
+        console.log(window);
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                a: 10
+            },
+            watch: {
+                a: ()=>{
+                    // console.log('a被监听了');
+                }
+            }
+        });
+        console.log(vm);
+    </script>
+</body>
+</html>
